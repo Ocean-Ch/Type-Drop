@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Mono&family=Varela+Round&display=swap');
+
 :root{
     --bgColor: #251d35;
     --textPrimary: #7259a3;
@@ -6,6 +7,11 @@
     --textError: #ca4754
     --primaryColor: #fd4;
     --logoColor: #e1e1e1;
+    --hoverColor: #ad9ccf;
+}
+.btn:hover{
+    background-color: var(--hoverColor);
+    opacity: 0.5;
 }
 body{
     font-family: 'Varela Round', sans-serif;
@@ -17,6 +23,7 @@ main{
     margin: 50px auto;
 }
 h1{
+    text-align: left;
     font-size: 60px;
     color: var(--logoColor);
 }
@@ -26,25 +33,26 @@ h1 svg{
 }
 button {
     background-color: transparent;
+    border-radius: 5px;
+    padding: 4px 5px;
     border: none;
+    cursor: pointer;
 }
 button svg{
     width: 40px;
     fill: var(--textPrimary);
     background-color: transparent;
 }
-#header{
+/* #header{
     display: grid;
     grid-template-columns: 1fr 1fr;
-}
+} */
 #buttons{
-    text-align: right;
+    text-align: center;
     background-color: transparent;
 }
 #info{
     color: var(--primaryColor);
-}
-#info{
     text-align: center;
     font-size: 40px;
 }
