@@ -9,17 +9,18 @@
     --logoColor: #e1e1e1;
     --hoverColor: #ad9ccf;
 }
-.btn:hover{
+/* .btn:hover{
+    fill: var(--logoColor);
     background-color: var(--hoverColor);
     opacity: 0.5;
-}
+} */
 body{
     font-family: 'Varela Round', sans-serif;
     background-color:var(--bgColor);
     color: var(--textPrimary);
 }
 main{
-    width: 600px;
+    width: 1000px;
     margin: 50px auto;
 }
 h1{
@@ -43,6 +44,9 @@ button svg{
     fill: var(--textPrimary);
     background-color: transparent;
 }
+button svg:hover{
+    fill: rgb(255, 255, 255);
+}
 /* #header{
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -55,4 +59,19 @@ button svg{
     color: var(--primaryColor);
     text-align: center;
     font-size: 40px;
+}
+div#game{
+    line-height: 45px;
+    height: 135px;
+    width: 800px;
+    margin: auto;
+    text-align: center;
+    overflow: hidden;
+}
+#words{
+    font-size: x-large;
+}
+div.word{
+    display: inline-block;
+    margin: 0 5px;
 }
