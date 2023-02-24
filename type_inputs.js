@@ -14,7 +14,8 @@ function generateWord(){
 }
 
 function makeDiv(word) {
-    return `<div class="word">${word}</div>`;
+    // inserts a close span and opening span in between each letter, and put each word in its own div
+    return `<div class="word"><span class="letter">${word.split('').join('</span><span class="letter">')}</div>`;
 }
 
 newGame();
