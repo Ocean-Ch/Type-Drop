@@ -8,6 +8,14 @@
     --primaryColor: #fd4;
     --logoColor: #e1e1e1;
     --hoverColor: #ad9ccf;
+    --correctColor: #fff;
+    --incorrectColor: var(--textSecondary);
+}
+.letter.correct{
+    color: var(--correctColor);
+}
+.letter.incorrect{
+    color: var(--incorrectColor);
 }
 /* .btn:hover{
     fill: var(--logoColor);
@@ -62,6 +70,27 @@ button svg:hover{
     text-align: center;
     font-size: 40px;
 }
+@keyframes blink {
+    0%{
+        opacity: 1;
+    }
+    50%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+#cursor{
+    width: 4px;
+    height: 1.6rem;
+    border-radius: 5px;
+    background-color: var(--textSecondary);
+    position: fixed;
+    top: 270px;
+    left: 392px;
+    animation: blink .9s infinite;
+}
 div#game{
     line-height: 45px;
     height: 180px;
@@ -72,6 +101,7 @@ div#game{
 }
 #words{
     font-size: x-large;
+    color: var(--textPrimary);
 }
 div.word{
     display: inline-block;
