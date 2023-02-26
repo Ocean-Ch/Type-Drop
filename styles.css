@@ -90,6 +90,7 @@ button svg:hover{
     top: 270px;
     left: 392px;
     animation: blink .9s infinite;
+    display: none;
 }
 div#game{
     line-height: 45px;
@@ -99,9 +100,29 @@ div#game{
     text-align: left;
     overflow: hidden;
 }
+#game:focus{
+    outline: 0;
+}
+#game:focus #words{
+    filter: blur(0);
+}
+#game:focus #cursor{
+    display: block;
+}
+#game:focus #focus-msg{
+    display: none;
+}
 #words{
     font-size: x-large;
     color: var(--textPrimary);
+    filter: blur(6px);
+}
+#focus-msg{
+    color: var(--textSecondary);
+    position: absolute;
+    inset: 0;
+    text-align: center;
+    padding-top: 325px;
 }
 div.word{
     display: inline-block;

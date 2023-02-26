@@ -40,6 +40,14 @@ document.getElementById('game').addEventListener('keyup', ev => {
     const key = ev.key;
     const currLetter = document.querySelector('.letter.curr');
     const expLetter = currLetter.innerHTML;
+    const isLetter = key.length === 1 && key !== ' ' && key !== '\t'; //not space or backspace
+
+    if (isLetter) {
+        if (currLetter){
+            addClass(currLetter, key === expLetter ? 'correct' : 'incorrect');
+            //alert(key === expLetter ? 'true' : 'false');
+        }
+    }
 });
 
 
